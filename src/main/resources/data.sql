@@ -1,0 +1,3 @@
+INSERT INTO coffee (name, description, price) VALUES ('Espresso', 'An espresso is a concentrated coffee drink brewed by forcing hot water under high pressure (about 9 bars) through a compact bed of finely ground coffee.', 2.50);
+INSERT INTO coffee (name, description, price) VALUES ('Latte', 'A latte (short for caffè latte) is a popular coffee drink made with one part espresso and two parts steamed milk, topped with a thin layer of milk foam.', 3.20);
+INSERT INTO coffee (name, description, price) VALUES ('Cappuccino', 'A cappuccino is a classic Italian coffee drink made with equal parts espresso, steamed milk, and milk foam. It is typically served in a smaller cup than a latte, offering a bolder coffee flavor and a rich, airy texture.', 3.00);
