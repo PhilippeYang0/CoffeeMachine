@@ -4,6 +4,7 @@ import com.example.coffeemachine.dto.CoffeeDTO;
 import com.example.coffeemachine.dto.CreateCoffeeRequest;
 import com.example.coffeemachine.dto.UpdateCoffeeRequest;
 import com.example.coffeemachine.service.CoffeeService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.sql.Update;
 import org.springframework.http.HttpStatus;
@@ -28,13 +29,13 @@ public class CoffeeController {
 
     @PostMapping("coffees")
     @ResponseStatus(HttpStatus.CREATED)
-    CoffeeDTO createCoffee(@RequestBody CreateCoffeeRequest request) {
+    CoffeeDTO createCoffee(@RequestBody @Valid CreateCoffeeRequest request) {
         return coffeeService.createCoffee(request);
     }
 
-    @PostMapping("coffees/{id}")
+    @PatchMapping("coffees/{id}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    CoffeeDTO updateCoffee(@RequestBody UpdateCoffeeRequest request, @PathVariable Long id){
+    CoffeeDTO updateCoffee(@RequestBody @Valid UpdateCoffeeRequest request, @PathVariable Long id){
         return coffeeService.updateCoffee(request,id);
     }
 

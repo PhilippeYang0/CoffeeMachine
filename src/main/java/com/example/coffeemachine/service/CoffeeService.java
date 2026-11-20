@@ -7,6 +7,7 @@ import com.example.coffeemachine.entity.Coffee;
 import com.example.coffeemachine.exception.CoffeeNotFoundException;
 import com.example.coffeemachine.mapper.CoffeeMapper;
 import com.example.coffeemachine.repository.CoffeeRepository;
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Service;
